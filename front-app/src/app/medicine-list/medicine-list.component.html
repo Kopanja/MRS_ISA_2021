@@ -1,0 +1,24 @@
+<div class="container-fluid container-padding" id="medList">
+    <div class="d-flex justify-content-center mt-2">
+      <button class="btn btn-danger mb-4 secondary-button" id="medListButton" type="button" data-bs-toggle="collapse" data-bs-target="#medicines" aria-expanded="false" aria-controls="pendingOffer">MEDICINES</button>
+    </div>
+    
+    
+    <div class="collapse filteri-container" style="background-color: #222831;" id="medicines">
+    <div>
+        <table class="table">
+            <thead>
+              <tr>
+                <th style="background-color: #f05454; color: #dddddd;" scope="col">NAME</th>
+                <th style="background-color: #f05454; color: #dddddd;" scope="col"></th>
+              </tr>
+            </thead>
+            <tbody class="tabela">
+              <tr *ngFor = "let medicine of medicineList">
+                <td>{{medicine.name}}</td>
+                <td><a class="tabela-dugme" role="button" *ngIf="medicine.id != undefined" (click) = "moreButton(medicine.id)">MORE</a></td>
+            </tbody>
+          </table>
+    </div>
+</div>
+</div>

@@ -8,6 +8,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { LoginComponent } from './login/login.component';
 import { PharmacyListComponent } from './pharmacy-list/pharmacy-list.component';
+import { MedicineListComponent } from './medicine-list/medicine-list.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { PharmacyListComponent } from './pharmacy-list/pharmacy-list.component';
     MainPageComponent,
     LoginComponent,
     PharmacyListComponent,
+    MedicineListComponent,
   ],
   imports: [
     BrowserModule,
