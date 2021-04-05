@@ -1,0 +1,28 @@
+<div class="container-fluid container-padding" id="pendingOffers">
+    <div class="d-flex justify-content-center mt-2">
+      <button class="btn btn-danger mb-4 secondary-button" id="pendingOfferButton" type="button" data-bs-toggle="collapse" data-bs-target="#pendingOffer" aria-expanded="false" aria-controls="pendingOffer">PHARMACIES</button>
+    </div>
+    
+    
+    <div class="collapse filteri-container" style="background-color: #222831;" id="pendingOffer">
+    <div>
+        <table class="table">
+            <thead>
+              <tr>
+                <th style="background-color: #f05454; color: #dddddd;" scope="col">NAME</th>
+                <th style="background-color: #f05454; color: #dddddd;" scope="col">DESCRIPTION</th>
+                <th style="background-color: #f05454; color: #dddddd;" scope="col">ADDRESS</th>
+                <th style="background-color: #f05454; color: #dddddd;" scope="col"></th>
+              </tr>
+            </thead>
+            <tbody class="tabela">
+              <tr *ngFor = "let pharmacy of pharmacyList">
+                <td>{{pharmacy.name}}</td>
+                <td>{{pharmacy.description}}</td>
+                <td>{{pharmacy.address}}</td>
+                <td><a class="tabela-dugme" role="button" *ngIf="pharmacy.id != undefined" (click) = "moreButton(pharmacy.id)">MORE</a></td>
+            </tbody>
+          </table>
+    </div>
+</div>
+</div>
