@@ -1,6 +1,7 @@
 package com.isa_mrs.project.model;
 
 import java.util.Collection;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -156,6 +157,12 @@ public class User implements UserDetails {
 	            	authority.getAuthority().getName()))
 	            .collect(Collectors.toList());
 		return grantedAuthorities;
+	}
+
+
+
+	public Date getLastPasswordResetDate() {
+		return null;
 	}
 
 
